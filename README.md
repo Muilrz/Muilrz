@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <div align="center">
 
 <img src="https://capsule-render.vercel.app/api?type=waving&height=230&color=0:0F172A,45:2563EB,100:7C3AED&text=Hi%20%F0%9F%91%8B%20I'm%20Muilrz&fontColor=FFFFFF&fontSize=46&fontAlignY=38&desc=AI%20Application%20Engineering%20%C3%97%20Scientific%20Instrument%20Software&descAlignY=60&descSize=18&animation=fadeIn" width="100%" />
@@ -293,21 +292,3 @@ flowchart TB
 <img src="https://capsule-render.vercel.app/api?type=waving&height=120&section=footer&color=0:0F172A,45:2563EB,100:7C3AED" width="100%" />
 
 </div>
-=======
-## Hi there 👋
-
-<!--
-**Muilrz/Muilrz** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
->>>>>>> 9fb8a330b7e246b7171a6f790b33009e11fc51e2
