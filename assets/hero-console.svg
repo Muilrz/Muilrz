@@ -1,4 +1,4 @@
-<svg width="1600" height="720" viewBox="0 0 1600 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="900" height="1400" viewBox="0 0 900 1400" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,500&amp;family=Source+Serif+4:ital,wght@1,400;1,500&amp;display=swap');
@@ -6,19 +6,19 @@
       .serif { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; }
     </style>
 
-    <linearGradient id="background" x1="0" y1="0" x2="1600" y2="720" gradientUnits="userSpaceOnUse">
+    <linearGradient id="background" x1="0" y1="0" x2="900" y2="1400" gradientUnits="userSpaceOnUse">
       <stop stop-color="#050505"/>
       <stop offset="0.48" stop-color="#111111"/>
       <stop offset="1" stop-color="#030303"/>
     </linearGradient>
 
-    <radialGradient id="leftGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(410 320) rotate(35) scale(680 520)">
+    <radialGradient id="leftGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(300 310) rotate(35) scale(620 500)">
       <stop stop-color="#FFFFFF" stop-opacity="0.12"/>
       <stop offset="0.42" stop-color="#FFFFFF" stop-opacity="0.035"/>
       <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
     </radialGradient>
 
-    <radialGradient id="rightGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1320 110) rotate(125) scale(470 620)">
+    <radialGradient id="rightGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(650 1040) rotate(125) scale(520 700)">
       <stop stop-color="#FFFFFF" stop-opacity="0.1"/>
       <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
     </radialGradient>
@@ -74,30 +74,30 @@
     </pattern>
 
     <clipPath id="frameClip">
-      <rect width="1600" height="720" rx="28"/>
+      <rect width="900" height="1400" rx="28"/>
     </clipPath>
   </defs>
 
   <g clip-path="url(#frameClip)">
-    <rect width="1600" height="720" fill="url(#background)"/>
-    <rect width="1600" height="720" fill="url(#leftGlow)"/>
-    <rect width="1600" height="720" fill="url(#rightGlow)"/>
-    <rect width="1600" height="720" fill="url(#grain)" opacity="0.65"/>
+    <rect width="900" height="1400" fill="url(#background)"/>
+    <rect width="900" height="1400" fill="url(#leftGlow)"/>
+    <rect width="900" height="1400" fill="url(#rightGlow)"/>
+    <rect width="900" height="1400" fill="url(#grain)" opacity="0.65"/>
 
     <!-- abstract monochrome bloom forms -->
     <g opacity="0.62" filter="url(#blurLarge)">
-      <ellipse cx="1260" cy="235" rx="238" ry="90" transform="rotate(-18 1260 235)" fill="#FFFFFF" fill-opacity="0.065"/>
-      <ellipse cx="1390" cy="355" rx="218" ry="72" transform="rotate(26 1390 355)" fill="#FFFFFF" fill-opacity="0.055"/>
-      <ellipse cx="1185" cy="425" rx="180" ry="60" transform="rotate(54 1185 425)" fill="#FFFFFF" fill-opacity="0.045"/>
+      <ellipse cx="670" cy="910" rx="238" ry="90" transform="rotate(-18 670 910)" fill="#FFFFFF" fill-opacity="0.065"/>
+      <ellipse cx="740" cy="1050" rx="218" ry="72" transform="rotate(26 740 1050)" fill="#FFFFFF" fill-opacity="0.055"/>
+      <ellipse cx="590" cy="1180" rx="180" ry="60" transform="rotate(54 590 1180)" fill="#FFFFFF" fill-opacity="0.045"/>
     </g>
 
     <!-- split divider -->
-    <path d="M832 38V682" stroke="#FFFFFF" stroke-opacity="0.08"/>
+    <path d="M38 720H862" stroke="#FFFFFF" stroke-opacity="0.08"/>
 
     <!-- LEFT STRONG GLASS PANEL -->
-    <rect x="24" y="24" width="784" height="672" rx="34" fill="url(#glassFillStrong)" filter="url(#softShadow)"/>
-    <rect x="24.7" y="24.7" width="782.6" height="670.6" rx="33.3" stroke="url(#glassStroke)" stroke-width="1.4"/>
-    <path d="M58 25H775" stroke="#FFFFFF" stroke-opacity="0.11"/>
+    <rect x="24" y="24" width="852" height="672" rx="34" fill="url(#glassFillStrong)" filter="url(#softShadow)"/>
+    <rect x="24.7" y="24.7" width="850.6" height="670.6" rx="33.3" stroke="url(#glassStroke)" stroke-width="1.4"/>
+    <path d="M58 25H843" stroke="#FFFFFF" stroke-opacity="0.11"/>
 
     <!-- nav -->
     <g class="display">
@@ -157,7 +157,7 @@
         <rect x="0.7" y="0.7" width="188.6" height="56.6" rx="28.3" stroke="url(#glassStroke)" stroke-width="1.4"/>
         <text x="24" y="36" fill="#FFFFFF" font-size="14" font-weight="500">Explore my work</text>
         <circle cx="161" cy="29" r="14" fill="#FFFFFF" fill-opacity="0.13"/>
-        <path d="M156 29H166M162 25L166 29L162 33" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M161 23V33M157 29L161 33L165 29" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
       </g>
     </g>
 
@@ -168,6 +168,8 @@
       <text x="375" y="661" fill="#FFFFFF" fill-opacity="0.68" font-size="22" class="serif">scientific instrument development.</text>
     </g>
 
+    <!-- LOWER SECTION: former right column -->
+    <g transform="translate(-785 690)">
     <!-- RIGHT TOP BAR -->
     <g class="display">
       <g transform="translate(870 40)">
@@ -281,11 +283,13 @@
       </g>-->
     </g>
 
+    </g>
+
     <!-- tiny floating particles -->
     <g fill="#FFFFFF">
-      <circle cx="1550" cy="142" r="1.4" opacity="0.35"><animate attributeName="opacity" values="0.18;0.55;0.18" dur="3s" repeatCount="indefinite"/></circle>
-      <circle cx="1210" cy="274" r="1.1" opacity="0.28"><animate attributeName="opacity" values="0.12;0.44;0.12" dur="4s" repeatCount="indefinite"/></circle>
-      <circle cx="846" cy="616" r="1.2" opacity="0.25"><animate attributeName="opacity" values="0.1;0.4;0.1" dur="3.6s" repeatCount="indefinite"/></circle>
+      <circle cx="850" cy="760" r="1.4" opacity="0.35"><animate attributeName="opacity" values="0.18;0.55;0.18" dur="3s" repeatCount="indefinite"/></circle>
+      <circle cx="690" cy="990" r="1.1" opacity="0.28"><animate attributeName="opacity" values="0.12;0.44;0.12" dur="4s" repeatCount="indefinite"/></circle>
+      <circle cx="60" cy="1320" r="1.2" opacity="0.25"><animate attributeName="opacity" values="0.1;0.4;0.1" dur="3.6s" repeatCount="indefinite"/></circle>
     </g>
   </g>
 </svg>
