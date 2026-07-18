@@ -1,8 +1,10 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&height=230&color=0:0F172A,45:2563EB,100:7C3AED&text=Hi%20%F0%9F%91%8B%20I'm%20Muilrz&fontColor=FFFFFF&fontSize=46&fontAlignY=38&desc=AI%20Application%20Engineering%20%C3%97%20Scientific%20Instrument%20Software&descAlignY=60&descSize=18&animation=fadeIn" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&height=230&color=0:0F172A,45:2563EB,100:7C3AED&text=Hi%20%F0%9F%91%8B%20I'm%20Liu Ming&fontColor=FFFFFF&fontSize=46&fontAlignY=38&desc=AI%20Application%20Engineering%20%C3%97%20Scientific%20Instrument%20Software&descAlignY=60&descSize=18&animation=fadeIn" width="100%" />
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=2800&pause=900&color=4F8CF7&center=true&vCenter=true&multiline=true&repeat=true&width=1100&height=110&lines=Instrument+Control+Software+%C2%B7+RAG+%C2%B7+Agents+%C2%B7+AI+Document+Analysis;C%2B%2B+%C2%B7+C+%C2%B7+Qt+%C2%B7+Python+%C2%B7+Linux+%C2%B7+LangGraph+%C2%B7+Control+Science;Building+AI-native+tools+for+scientific+instrument+development" alt="Typing SVG" />
+<br>
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=2800&pause=900&color=4F8CF7&center=true&vCenter=true&multiline=true&repeat=true&width=1100&height=150&lines=Instrument+Control+Software+%C2%B7+RAG+%C2%B7+Agents+%C2%B7+AI+Document+Analysis;C%2B%2B+%C2%B7+C+%C2%B7+Qt+%C2%B7+Python+%C2%B7+Linux+%C2%B7+LangGraph+%C2%B7+Control+Science;Building+AI-native+tools+for+scientific+instrument+development" alt="Typing SVG" />
 
 <p>
   <img src="https://komarev.com/ghpvc/?username=Muilrz&label=PROFILE%20VIEWS&style=for-the-badge&color=2563eb" alt="Profile views" />
