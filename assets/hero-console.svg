@@ -227,7 +227,7 @@
     </g>
 
 <!-- cool spectral header -->
-    <g clip-path="url(#waveClip)" transform="translate(20 40) scale(0.94)"">
+    <g clip-path="url(#waveClip)" transform="translate(20 40) scale(0.94)">
       
 
       <path class="spectrum-a" d="M40 108 C120 90 170 120 238 104 C296 90 342 68 410 92 C472 114 520 136 590 118 C650 103 704 74 784 94 C824 104 848 110 860 108" stroke="#FFFFFF" stroke-opacity="0.56" stroke-width="1.8" fill="none" stroke-linecap="round"/>
