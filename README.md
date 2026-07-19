@@ -5,11 +5,10 @@
     width="100%"
     alt="whoami"
   /> 
-  <br>
 <img
     src="./assets/hero-console.svg"
     width="100%"
-    alt="AI instrument lab console"
+    alt="AI instrument lab "
   />
 
    
