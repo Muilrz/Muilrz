@@ -23,6 +23,9 @@
       @keyframes skillSheen { 0%,72%,100%{transform:translateX(-38px) skewX(-24deg); opacity:0} 80%{opacity:.12} 94%{transform:translateX(144px) skewX(-24deg); opacity:0} }
       @keyframes gRipple { 0%{transform:scale(.92);opacity:0} 16%{opacity:.16} 100%{transform:scale(1.5);opacity:0} }
       @keyframes connectedText { 0%,100%{opacity:.66} 50%{opacity:.84} }
+      @keyframes spectrumA { 0%,100%{d:path('M40 108 C120 90 170 120 238 104 C296 90 342 68 410 92 C472 114 520 136 590 118 C650 103 704 74 784 94 C824 104 848 110 860 108')} 50%{d:path('M40 108 C116 122 170 70 236 88 C302 106 346 126 410 108 C470 92 522 76 592 96 C656 116 708 128 784 110 C822 100 848 96 860 108')}}
+      @keyframes spectrumB { 0%,100%{d:path('M40 128 C112 112 168 148 240 130 C296 116 350 86 410 106 C474 126 528 156 596 142 C662 128 720 98 860 124')} 50%{d:path('M40 128 C104 146 168 100 238 112 C300 122 352 146 412 134 C476 120 534 92 598 110 C664 128 724 150 860 124')}}
+      @keyframes spectrumC { 0%,100%{d:path('M40 148 C108 156 166 122 232 140 C296 156 360 182 430 166 C494 150 552 124 620 132 C692 140 762 170 860 150')} 50%{d:path('M40 148 C108 128 168 170 234 158 C300 146 362 126 430 142 C496 158 556 178 622 164 C694 148 762 126 860 150')}}
       .glow-a{animation:glowDriftA 10.5s ease-in-out infinite;transform-origin:center}
       .glow-b{animation:glowDriftB 12.2s ease-in-out infinite;transform-origin:center}
       .bloom-motion{animation:bloomFloat 13.5s ease-in-out infinite;transform-origin:680px 1040px}
@@ -44,8 +47,13 @@
       .connected-text{animation:connectedText 3.2s ease-in-out infinite}
       .project-light-core.p2{animation-delay:.42s}.project-light-core.p3{animation-delay:.84s}.project-light-core.p4{animation-delay:1.26s}
       .intro-1{animation:enterSoft 1.28s cubic-bezier(.22,1,.36,1) both}.intro-2{animation:enterSoft 1.28s .32s cubic-bezier(.22,1,.36,1) both}.intro-3{animation:enterSoft 1.28s .68s cubic-bezier(.22,1,.36,1) both}.intro-4{animation:enterSoft 1.28s 1.02s cubic-bezier(.22,1,.36,1) both}.intro-5{animation:enterSoft 1.28s 1.32s cubic-bezier(.22,1,.36,1) both}
+      .spectrum-a{animation:spectrumA 4.2s ease-in-out infinite}
+      .spectrum-b{animation:spectrumB 4.8s ease-in-out infinite}
+      .spectrum-c{animation:spectrumC 5.6s ease-in-out infinite}
       @media (prefers-reduced-motion: reduce){*{animation:none!important}}
     </style>
+
+    
 
     <linearGradient id="background" x1="0" y1="0" x2="900" y2="1400" gradientUnits="userSpaceOnUse">
       <stop stop-color="#050505"/>
@@ -136,6 +144,7 @@
     <clipPath id="metaClip"><rect width="288" height="142" rx="28"/></clipPath>
     <clipPath id="projectsClip"><rect width="682" height="372" rx="40"/></clipPath>
     <clipPath id="projCardClip"><rect width="301" height="112" rx="27"/></clipPath>
+    <clipPath id="waveClip"><rect x="44" y="58" width="812" height="116" rx="22"/></clipPath>
   </defs>
 
   <g clip-path="url(#frameClip)">
@@ -150,6 +159,8 @@
       <ellipse cx="740" cy="1050" rx="218" ry="72" transform="rotate(26 740 1050)" fill="#FFFFFF" fill-opacity="0.055"/>
       <ellipse cx="590" cy="1180" rx="180" ry="60" transform="rotate(54 590 1180)" fill="#FFFFFF" fill-opacity="0.045"/>
     </g>
+
+    
 
     <!-- split divider -->
     <path d="M38 720H862" stroke="#FFFFFF" stroke-opacity="0.08"/>
@@ -170,16 +181,16 @@
         <circle cx="18" cy="18" r="17" stroke="url(#glassStrokeLight)"/>
         <path d="M11 23V12L18 20L25 12V23" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
       </g>
-      <text x="106" y="82" fill="#FFFFFF" font-size="24" font-weight="600" letter-spacing="-1.2">Muil</text>
+      <text class="serif" x="100" y="83" fill="#FFFFFF" font-size="24" font-weight="100" letter-spacing="-0.5">Muil Gin</text>
 
-      <g transform="translate(674 50)">
+      <g transform="translate(730 50)">
         <rect width="102" height="46" rx="23" fill="url(#glassFill)"/>
         <g clip-path="url(#liuClip)"><g class="border-scan s2"><rect x="-44" y="-6" width="44" height="58" fill="url(#scanBeam)" transform="skewX(-24)"/></g></g>
         <rect x="0.7" y="0.7" width="100.6" height="44.6" rx="22.3" stroke="url(#glassStrokeLight)" stroke-width="1.4"/>
         <path d="M24 17H38M24 23H38M24 29H38" stroke="#FFFFFF" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round" transform="translate(-10 0)"/>
         <text x="35" y="29" fill="#FFFFFF" fill-opacity="0.8" font-size="13" font-weight="500">Liu Ming</text>
       </g>
-      <g transform="translate(687 106)">
+      <g transform="translate(739 106)">
         <g transform="translate(0 0)">
           <circle cx="8" cy="8" r="8" fill="#FFFFFF" fill-opacity="0.08"/>
           <circle cx="8" cy="8" r="7.4" stroke="url(#glassStrokeLight)" stroke-width="1"/>
@@ -211,7 +222,18 @@
         <ellipse class="lm-highlight" cx="40" cy="-26" rx="21" ry="6.5" fill="#FFFFFF" fill-opacity="0.06" filter="url(#blurLarge)"/>
         <path class="lm-highlight" d="M17 17C29 7 51 7 63 17" transform="translate(0 -40)" stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="1.2" stroke-linecap="round"/>
       </g>
-      <text x="40" y="8" text-anchor="middle" fill="#FFFFFF" fill-opacity="0.92" font-size="23" font-weight="600" letter-spacing="-1">L M</text>
+      <text class="serif" x="40" y="8" text-anchor="middle" fill="#FFFFFF" fill-opacity="0.92" font-size="23" font-weight="600" letter-spacing="-1">L M</text>
+
+    </g>
+
+<!-- cool spectral header -->
+    <g clip-path="url(#waveClip)" transform="translate(20 40) scale(0.94)"">
+      
+
+      <path class="spectrum-a" d="M40 108 C120 90 170 120 238 104 C296 90 342 68 410 92 C472 114 520 136 590 118 C650 103 704 74 784 94 C824 104 848 110 860 108" stroke="#FFFFFF" stroke-opacity="0.56" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+      <path class="spectrum-b" d="M40 128 C112 112 168 148 240 130 C296 116 350 86 410 106 C474 126 528 156 596 142 C662 128 720 98 860 124" stroke="#FFFFFF" stroke-opacity="0.28" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+      <path class="spectrum-c" d="M40 148 C108 156 166 122 232 140 C296 156 360 182 430 166 C494 150 552 124 620 132 C692 140 762 170 860 150" stroke="#FFFFFF" stroke-opacity="0.16" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+
     </g>
 
     <!-- hero title -->
@@ -283,7 +305,7 @@
         <text class="connected-text" x="58" y="30" fill="#FFFFFF" fill-opacity="0.72" font-size="13">github.com/Muilrz</text>
       </g>
 
-      <g transform="translate(1372 40)">
+      <g transform="translate(1370 40)">
         <rect width="180" height="48" rx="24" fill="url(#glassFill)"/>
         <g clip-path="url(#aiClip)"><g class="border-scan s5"><rect x="-48" y="-6" width="48" height="60" fill="url(#scanBeam)" transform="skewX(-24)"/></g></g>
         <rect x="0.7" y="0.7" width="178.6" height="46.6" rx="23.3" stroke="url(#glassStrokeLight)" stroke-width="1.4"/>
@@ -292,6 +314,7 @@
         <text x="54" y="30" fill="#FFFFFF" fill-opacity="0.76" font-size="13" font-weight="500">AI × Instrument</text>
       </g>
     </g>
+
 
     <!-- small ecosystem card -->
     <g transform="translate(870 118)" class="display">
@@ -306,10 +329,10 @@
     </g>
 
     <!-- subtle metadata -->
-    <g class="display">
-      <text x="1195" y="142" fill="#FFFFFF" fill-opacity="0.22" font-size="10" letter-spacing="2">> LAB NODE / XMU <tspan class="cursor">_</tspan></text>
-      <text x="1195" y="164" fill="#FFFFFF" fill-opacity="0.22" font-size="10" letter-spacing="2">> BUILD / Prof. Ren's group <tspan class="cursor">_</tspan></text>
-      <text x="1195" y="186" fill="#FFFFFF" fill-opacity="0.22" font-size="10" letter-spacing="2">> SESSION / Liu Ming <tspan class="cursor">_</tspan></text>
+    <g transform="translate(20 50)" class="display">
+      <text x="1195" y="142" fill="#FFFFFF" fill-opacity="0.52" font-size="10" letter-spacing="2">> LAB NODE / XMU <tspan class="cursor">_</tspan></text>
+      <text x="1195" y="164" fill="#FFFFFF" fill-opacity="0.52" font-size="10" letter-spacing="2">> BUILD / Prof. Ren's group <tspan class="cursor">_</tspan></text>
+      <text x="1195" y="186" fill="#FFFFFF" fill-opacity="0.2" font-size="10" letter-spacing="2">> SESSION / Liu Ming <tspan class="cursor">_</tspan></text>
     </g>
 
     <!-- PROJECTS OUTER PANEL -->

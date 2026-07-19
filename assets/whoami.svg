@@ -162,44 +162,414 @@
 
     <!-- top nav -->
     <g class="display">
-      <g transform="translate(58 63)">
+      <g transform="translate(58 49)">
         <circle cx="18" cy="18" r="17.5" fill="#FFFFFF" fill-opacity="0.08"/>
         <circle cx="18" cy="18" r="17" stroke="url(#glassStrokeLight)"/>
         <path d="M11 23V12L18 20L25 12V23" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
       </g>
-      <text class="serif" x="100" y="90" fill="#FFFFFF" font-size="24" font-weight="100" letter-spacing="-0.5">github.com/Muilrz</text>
 
-      <g transform="translate(750 60)">
+      <text class="serif" x="100" y="90" fill="#FFFFFF" font-size="24" font-weight="100" letter-spacing="-0.5" transform="translate(0 -15)" >Muil Gin</text>
+
+      <g transform="translate(740 43)">
         <rect width="102" height="46" rx="23" fill="url(#glassFill)"/>
         <g clip-path="url(#ctaClip)"><g class="border-scan s2"><rect x="-44" y="-6" width="44" height="58" fill="url(#scanBeam)" transform="skewX(-24)"/></g></g>
         <rect x="0.7" y="0.7" width="100.6" height="44.6" rx="22.3" stroke="url(#glassStrokeLight)" stroke-width="1.4"/>
         <path d="M24 17H38M24 23H38M24 29H38" stroke="#FFFFFF" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round" transform="translate(-12 0)"/>
-        <text x="32" y="29" fill="#FFFFFF" fill-opacity="0.8" font-size="13" font-weight="500">About Me</text>
+        <text x="30" y="28" fill="#FFFFFF" fill-opacity="0.8" font-size="13" font-weight="500">About Me</text>
       </g>
     </g>
+        <!-- AI × SCIENTIFIC INSTRUMENT 动效板块 -->
+<g id="ai-instrument-flow" transform="translate(43 40) scale(1.30)">
+  <defs>
+    <linearGradient id="aif-panel-fill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.075"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.025"/>
+    </linearGradient>
 
-    <!-- cool spectral header -->
-    <g clip-path="url(#waveClip)">
-      <rect x="44" y="58" width="812" height="116" rx="22" fill="#FFFFFF" fill-opacity="0.02"/>
-      <rect x="44.7" y="58.7" width="810.6" height="114.6" rx="21.3" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="1.2"/>
-      <g class="beam" filter="url(#blurLarge)">
-        <ellipse cx="312" cy="116" rx="220" ry="34" fill="#FFFFFF" fill-opacity="0.05"/>
-      </g>
-      <path class="spectrum-a" d="M40 108 C120 90 170 120 238 104 C296 90 342 68 410 92 C472 114 520 136 590 118 C650 103 704 74 784 94 C824 104 848 110 860 108" stroke="#FFFFFF" stroke-opacity="0.56" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-      <path class="spectrum-b" d="M40 128 C112 112 168 148 240 130 C296 116 350 86 410 106 C474 126 528 156 596 142 C662 128 720 98 860 124" stroke="#FFFFFF" stroke-opacity="0.28" stroke-width="1.4" fill="none" stroke-linecap="round"/>
-      <path class="spectrum-c" d="M40 148 C108 156 166 122 232 140 C296 156 360 182 430 166 C494 150 552 124 620 132 C692 140 762 170 860 150" stroke="#FFFFFF" stroke-opacity="0.16" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+    <linearGradient id="aif-panel-stroke" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.28"/>
+      <stop offset="55%" stop-color="#FFFFFF" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.18"/>
+    </linearGradient>
 
+    <linearGradient id="aif-scan-gradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+
+    <clipPath id="aif-panel-clip">
+      <rect width="626" height="112" rx="24"/>
+    </clipPath>
+
+    <filter id="aif-soft-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Glass panel -->
+  <rect
+    width="626"
+    height="112"
+    rx="24"
+    fill="url(#aif-panel-fill)"
+  />
+
+  <rect
+    x="0.7"
+    y="0.7"
+    width="624.6"
+    height="110.6"
+    rx="23.3"
+    fill="none"
+    stroke="url(#aif-panel-stroke)"
+    stroke-width="1.4"
+  />
+
+  <!-- Moving scan light -->
+  <g clip-path="url(#aif-panel-clip)">
+    <rect
+      x="-160"
+      y="0"
+      width="150"
+      height="112"
+      fill="url(#aif-scan-gradient)"
+      opacity="0.55"
+    >
+      <animate
+        attributeName="x"
+        values="-160;640"
+        dur="5.5s"
+        repeatCount="indefinite"
+      />
+    </rect>
+  </g>
+
+  <!-- Header -->
+  <circle cx="25" cy="20.5" r="11.5" fill="#FFFFFF" fill-opacity="0.8">
+    <animate
+      attributeName="fill-opacity"
+      values="0.35;1;0.35"
+      dur="2s"
+      repeatCount="indefinite"
+    />
+  </circle>
+
+
+
+
+
+  <!-- Left data pipeline -->
+  <g transform="translate(22 46)">
+    <!-- Connection line -->
+    <path
+      d="M28 20H220"
+      fill="none"
+      stroke="#FFFFFF"
+      stroke-opacity="0.16"
+      stroke-width="1"
+    />
+
+    <!-- Moving data packet -->
+    <circle
+      cx="28"
+      cy="20"
+      r="2.8"
+      fill="#FFFFFF"
+      filter="url(#aif-soft-glow)"
+    >
+      <animate
+        attributeName="cx"
+        values="28;220"
+        dur="3.2s"
+        repeatCount="indefinite"
+      />
+      <animate
+        attributeName="opacity"
+        values="0;1;1;0"
+        keyTimes="0;0.15;0.85;1"
+        dur="3.2s"
+        repeatCount="indefinite"
+      />
+    </circle>
+
+    <!-- Node 1 -->
+    <g>
+      <rect
+        x="0"
+        y="4"
+        width="56"
+        height="32"
+        rx="10"
+        fill="#FFFFFF"
+        fill-opacity="0.045"
+        stroke="#FFFFFF"
+        stroke-opacity="0.14"
+      />
+      <path
+        transform="translate(-7 2)"
+        d="M14 13H25M14 18H29M14 23H24"
+        stroke="#FFFFFF"
+        stroke-opacity="0.65"
+        stroke-width="1.2"
+        stroke-linecap="round"
+      />
+      <text
+        x="35"
+        y="22"
+        text-anchor="middle"
+        fill="#FFFFFF"
+        fill-opacity="0.72"
+        font-family="Poppins, Arial, sans-serif"
+        font-size="7"
+        letter-spacing="0.5"
+      >
+        DOC
+      </text>
     </g>
+
+    <!-- Node 2 -->
+    <g transform="translate(68 0)">
+      <rect
+        x="0"
+        y="4"
+        width="56"
+        height="32"
+        rx="10"
+        fill="#FFFFFF"
+        fill-opacity="0.045"
+        stroke="#FFFFFF"
+        stroke-opacity="0.14"
+      />
+      <circle
+
+        cx="18"
+        cy="20"
+        r="7"
+        fill="none"
+        stroke="#FFFFFF"
+        stroke-opacity="0.48"
+      />
+      <circle cx="18" cy="20" r="2" fill="#FFFFFF" fill-opacity="0.8">
+        <animate
+          attributeName="r"
+          values="1.5;3;1.5"
+          dur="1.8s"
+          repeatCount="indefinite"
+        />
+      </circle>
+      <text
+        x="39"
+        y="22"
+        text-anchor="middle"
+        fill="#FFFFFF"
+        fill-opacity="0.72"
+        font-family="Poppins, Arial, sans-serif"
+        font-size="7"
+        letter-spacing="0.5"
+      >
+        RAG
+      </text>
+    </g>
+
+    <!-- Node 3 -->
+    <g transform="translate(136 0)">
+      <rect
+       transform="translate(0 0)"
+        x="0"
+        y="4"
+        width="56"
+        height="32"
+        rx="10"
+        fill="#FFFFFF"
+        fill-opacity="0.045"
+        stroke="#FFFFFF"
+        stroke-opacity="0.14"
+      />
+      <circle transform="translate(-3 0)" cx="15" cy="16" r="2" fill="#FFFFFF" fill-opacity="0.65"/>
+      <circle transform="translate(-3 0)" cx="23" cy="20" r="2" fill="#FFFFFF" fill-opacity="0.65"/>
+      <circle transform="translate(-3 0)" cx="15" cy="25" r="2" fill="#FFFFFF" fill-opacity="0.65"/>
+      <path
+      transform="translate(-3 0)"
+        d="M17 17L21 19M21 21L17 24"
+        stroke="#FFFFFF"
+        stroke-opacity="0.45"
+      />
+      <text
+      transform="translate(-3 0)"
+        x="40"
+        y="22"
+        text-anchor="middle"
+        fill="#FFFFFF"
+        fill-opacity="0.72"
+        font-family="Poppins, Arial, sans-serif"
+        font-size="7"
+        letter-spacing="0.4"
+      >
+        AGENT
+      </text>
+    </g>
+
+    <!-- Node 4 -->
+    <g transform="translate(204 0)">
+      <rect
+        x="0"
+        y="4"
+        width="66"
+        height="32"
+        rx="10"
+        fill="#FFFFFF"
+        fill-opacity="0.07"
+        stroke="#FFFFFF"
+        stroke-opacity="0.24"
+      />
+      <path
+        d="M13 24V16M18 27V13M23 23V17"
+        stroke="#FFFFFF"
+        stroke-opacity="0.72"
+        stroke-width="1.3"
+        stroke-linecap="round"
+      />
+      <text
+      transform="translate(-2 0)"
+        x="46"
+        y="22"
+        text-anchor="middle"
+        fill="#FFFFFF"
+        fill-opacity="0.82"
+        font-family="Poppins, Arial, sans-serif"
+        font-size="7"
+        letter-spacing="0.3"
+      >
+        CTRL
+      </text>
+    </g>
+  </g>
+
+  <!-- Center divider -->
+  <path
+    d="M318 43V92"
+    stroke="#FFFFFF"
+    stroke-opacity="0.1"
+    stroke-width="1"
+  />
+
+  <!-- Right instrument signal -->
+  <g transform="translate(340 48)">
+    <!-- Grid -->
+    <g stroke="#FFFFFF" stroke-opacity="0.055" stroke-width="1">
+      <path d="M0 0H260M0 14H260M0 28H260M0 42H260"/>
+      <path d="M0 0V42M52 0V42M104 0V42M156 0V42M208 0V42M260 0V42"/>
+    </g>
+
+    <!-- Base waveform -->
+    <path
+      d="M0 23
+         C12 23 14 22 22 22
+         C30 22 32 8 40 8
+         C48 8 48 35 58 35
+         C68 35 69 18 78 18
+         C87 18 90 24 100 24
+         C112 24 113 21 124 21
+         C136 21 137 11 146 11
+         C155 11 157 32 166 32
+         C176 32 178 18 188 18
+         C198 18 200 24 210 24
+         C222 24 226 22 260 22"
+      fill="none"
+      stroke="#FFFFFF"
+      stroke-opacity="0.22"
+      stroke-width="1.2"
+      stroke-linecap="round"
+    />
+
+    <!-- Animated signal trace -->
+    <path
+      d="M0 23
+         C12 23 14 22 22 22
+         C30 22 32 8 40 8
+         C48 8 48 35 58 35
+         C68 35 69 18 78 18
+         C87 18 90 24 100 24
+         C112 24 113 21 124 21
+         C136 21 137 11 146 11
+         C155 11 157 32 166 32
+         C176 32 178 18 188 18
+         C198 18 200 24 210 24
+         C222 24 226 22 260 22"
+      pathLength="100"
+      fill="none"
+      stroke="#FFFFFF"
+      stroke-opacity="0.9"
+      stroke-width="1.7"
+      stroke-linecap="round"
+      stroke-dasharray="18 82"
+      filter="url(#aif-soft-glow)"
+    >
+      <animate
+        attributeName="stroke-dashoffset"
+        values="0;-100"
+        dur="2.8s"
+        repeatCount="indefinite"
+      />
+    </path>
+
+    <!-- Sampling cursor -->
+    <line
+      x1="0"
+      y1="-3"
+      x2="0"
+      y2="45"
+      stroke="#FFFFFF"
+      stroke-opacity="0.32"
+      stroke-width="1"
+    >
+      <animate
+        attributeName="x1"
+        values="0;260"
+        dur="3.6s"
+        repeatCount="indefinite"
+      />
+      <animate
+        attributeName="x2"
+        values="0;260"
+        dur="3.6s"
+        repeatCount="indefinite"
+      />
+    </line>
+  </g>
+
+  <!-- Footer labels -->
+  <text
+    x="22"
+    y="101"
+    fill="#FFFFFF"
+    fill-opacity="0.32"
+    font-family="Poppins, Arial, sans-serif"
+    font-size="7"
+    letter-spacing="0.8"
+  >
+    AGENT · INSTRUMENTS · SOFTWARE DEV
+  </text>
+
+</g>
+
+
+
 
     <!-- hero identity -->
-    <g transform="translate(82 220)" class="display">
+    <g transform="translate(82 240)" class="display">
       <g class="lm-shell">
         <circle cx="40" cy="0" r="39.3" fill="url(#glassFillStrong)" filter="url(#shadow)"/>
         <circle class="lm-ring" cx="40" cy="0" r="39" stroke="url(#glassStroke)" stroke-width="1.4"/>
         <ellipse class="lm-highlight" cx="40" cy="-26" rx="21" ry="6.5" fill="#FFFFFF" fill-opacity="0.06" filter="url(#blurLarge)"/>
         <path class="lm-highlight" d="M17 17C29 7 51 7 63 17" transform="translate(0 -40)" stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="1.2" stroke-linecap="round"/>
       </g>
-        <g transform="translate(500 28)" fill="#FFFFFF" fill-opacity="0.72">
+        <g transform="translate(500 8)" fill="#FFFFFF" fill-opacity="0.72">
           <rect class="eq1" x="0" y="12" width="5" height="26" rx="2" transform-origin="2.5px 38px"/>
           <rect class="eq2" x="10" y="4" width="5" height="34" rx="2" transform-origin="12.5px 38px"/>
           <rect class="eq3" x="20" y="18" width="5" height="20" rx="2" transform-origin="22.5px 38px"/>
