@@ -4,6 +4,44 @@
       @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,500&amp;family=Source+Serif+4:ital,wght@1,400;1,500&amp;display=swap');
       .display { font-family: 'Poppins', Arial, sans-serif; }
       .serif { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; }
+
+      /* Instrument-console motion system */
+      @keyframes glowDriftA { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(22px,14px) scale(1.032)} }
+      @keyframes glowDriftB { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(-22px,-24px) scale(1.045)} }
+      @keyframes bloomFloat { 0%,100%{transform:translate(0,0) rotate(0deg)} 50%{transform:translate(-18px,22px) rotate(2.4deg)} }
+      @keyframes lmShellScale { 0%,100%{transform:scale(1)} 50%{transform:scale(1.032)} }
+      @keyframes lmRingGlow { 0%,100%{stroke-opacity:.42} 50%{stroke-opacity:.86} }
+      @keyframes lmHighlightFloat { 0%,100%{transform:translateY(0); opacity:.08} 50%{transform:translateY(8px); opacity:.24} }
+      @keyframes arrowDrop { 0%,18%,100%{transform:translateY(0);opacity:.72} 8%{transform:translateY(5px);opacity:1} 13%{transform:translateY(2px);opacity:.9} }
+      @keyframes cursorBlink { 0%,46%{opacity:.85} 47%,100%{opacity:.08} }
+      @keyframes scanAcross { 0%{transform:translateX(-160px);opacity:0} 12%{opacity:.65} 60%{opacity:.2} 100%{transform:translateX(870px);opacity:0} }
+      @keyframes starWake { 0%,72%,100%{transform:rotate(0deg) scale(1);opacity:.72} 82%{transform:rotate(12deg) scale(1.15);opacity:1} 90%{transform:rotate(-4deg) scale(1.04);opacity:.9} }
+      @keyframes cardSheen { 0%,65%{transform:translateX(-260px);opacity:0} 72%{opacity:.18} 100%{transform:translateX(340px);opacity:0} }
+      @keyframes enterSoft { 0%{opacity:0;transform:translateY(16px)} 55%{opacity:.92} 100%{opacity:1;transform:translateY(0)} }
+      @keyframes projectLightPulse { 0%,100%{opacity:.34;transform:scale(.84)} 50%{opacity:1;transform:scale(1.08)} }
+      @keyframes skillSheen { 0%,72%,100%{transform:translateX(-38px) skewX(-24deg); opacity:0} 80%{opacity:.12} 94%{transform:translateX(144px) skewX(-24deg); opacity:0} }
+      @keyframes gRipple { 0%{transform:scale(.92);opacity:0} 16%{opacity:.16} 100%{transform:scale(1.5);opacity:0} }
+      @keyframes connectedText { 0%,100%{opacity:.66} 50%{opacity:.84} }
+      .glow-a{animation:glowDriftA 10.5s ease-in-out infinite;transform-origin:center}
+      .glow-b{animation:glowDriftB 12.2s ease-in-out infinite;transform-origin:center}
+      .bloom-motion{animation:bloomFloat 13.5s ease-in-out infinite;transform-origin:680px 1040px}
+      .lm-shell{animation:lmShellScale 5.0s ease-in-out infinite;transform-origin:40px 0px}
+      .lm-ring{animation:lmRingGlow 5.0s ease-in-out infinite}
+      .lm-highlight{animation:lmHighlightFloat 5.0s ease-in-out infinite;transform-origin:40px 0px}
+      .arrow-motion{animation:arrowDrop 2.4s ease-in-out infinite}
+      .cursor{animation:cursorBlink 1.05s steps(1,end) infinite}
+      .scan-line{animation:scanAcross 8.5s linear infinite}
+      .spark{transform-box:fill-box;transform-origin:center;animation:starWake 5.5s ease-in-out infinite}
+      .sheen{animation:cardSheen 7.5s ease-in-out infinite}
+      .project-light-core{transform-box:fill-box;transform-origin:center;animation:projectLightPulse 2.8s cubic-bezier(.22,1,.36,1) infinite}
+      .skill-sheen{animation:skillSheen 7.8s ease-in-out infinite}
+      .skill-sheen.s2{animation-delay:.95s}.skill-sheen.s3{animation-delay:1.9s}
+      .g-ripple{transform-origin:31px 24px;animation:gRipple 3.4s ease-out infinite}
+      .g-ripple.r2{animation-delay:1.15s}
+      .connected-text{animation:connectedText 3.2s ease-in-out infinite}
+      .project-light-core.p2{animation-delay:.42s}.project-light-core.p3{animation-delay:.84s}.project-light-core.p4{animation-delay:1.26s}
+      .intro-1{animation:enterSoft 1.28s cubic-bezier(.22,1,.36,1) both}.intro-2{animation:enterSoft 1.28s .32s cubic-bezier(.22,1,.36,1) both}.intro-3{animation:enterSoft 1.28s .68s cubic-bezier(.22,1,.36,1) both}.intro-4{animation:enterSoft 1.28s 1.02s cubic-bezier(.22,1,.36,1) both}.intro-5{animation:enterSoft 1.28s 1.32s cubic-bezier(.22,1,.36,1) both}
+      @media (prefers-reduced-motion: reduce){*{animation:none!important}}
     </style>
 
     <linearGradient id="background" x1="0" y1="0" x2="900" y2="1400" gradientUnits="userSpaceOnUse">
@@ -76,16 +114,19 @@
     <clipPath id="frameClip">
       <rect width="900" height="1400" rx="28"/>
     </clipPath>
+    <clipPath id="skillClip1"><rect width="126" height="46" rx="23"/></clipPath>
+    <clipPath id="skillClip2"><rect width="126" height="46" rx="23"/></clipPath>
+    <clipPath id="skillClip3"><rect width="126" height="46" rx="23"/></clipPath>
   </defs>
 
   <g clip-path="url(#frameClip)">
     <rect width="900" height="1400" fill="url(#background)"/>
-    <rect width="900" height="1400" fill="url(#leftGlow)"/>
-    <rect width="900" height="1400" fill="url(#rightGlow)"/>
+    <rect class="glow-a" width="900" height="1400" fill="url(#leftGlow)"/>
+    <rect class="glow-b" width="900" height="1400" fill="url(#rightGlow)"/>
     <rect width="900" height="1400" fill="url(#grain)" opacity="0.65"/>
 
     <!-- abstract monochrome bloom forms -->
-    <g opacity="0.62" filter="url(#blurLarge)">
+    <g class="bloom-motion" opacity="0.62" filter="url(#blurLarge)">
       <ellipse cx="670" cy="910" rx="238" ry="90" transform="rotate(-18 670 910)" fill="#FFFFFF" fill-opacity="0.065"/>
       <ellipse cx="740" cy="1050" rx="218" ry="72" transform="rotate(26 740 1050)" fill="#FFFFFF" fill-opacity="0.055"/>
       <ellipse cx="590" cy="1180" rx="180" ry="60" transform="rotate(54 590 1180)" fill="#FFFFFF" fill-opacity="0.045"/>
@@ -93,6 +134,9 @@
 
     <!-- split divider -->
     <path d="M38 720H862" stroke="#FFFFFF" stroke-opacity="0.08"/>
+    <g clip-path="url(#frameClip)">
+      <rect class="scan-line" x="38" y="718.5" width="120" height="3" rx="1.5" fill="url(#glassStroke)" opacity="0"/>
+    </g>
 
     <!-- LEFT STRONG GLASS PANEL -->
     <rect x="24" y="24" width="852" height="672" rx="34" fill="url(#glassFillStrong)" filter="url(#softShadow)"/>
@@ -114,40 +158,74 @@
         <path d="M24 17H38M24 23H38M24 29H38" stroke="#FFFFFF" stroke-opacity="0.8" stroke-width="1.5" stroke-linecap="round" transform="translate(-10 0)"/>
         <text x="35" y="29" fill="#FFFFFF" fill-opacity="0.8" font-size="13" font-weight="500">Liu Ming</text>
       </g>
+      <g transform="translate(687 106)">
+        <g transform="translate(0 0)">
+          <circle cx="8" cy="8" r="8" fill="#FFFFFF" fill-opacity="0.08"/>
+          <circle cx="8" cy="8" r="7.4" stroke="url(#glassStrokeLight)" stroke-width="1"/>
+          <circle class="project-light-core" cx="8" cy="8" r="2.35" fill="#FFFFFF" fill-opacity="0.78"/>
+        </g>
+        <g transform="translate(24 0)">
+          <circle cx="8" cy="8" r="8" fill="#FFFFFF" fill-opacity="0.08"/>
+          <circle cx="8" cy="8" r="7.4" stroke="url(#glassStrokeLight)" stroke-width="1"/>
+          <circle class="project-light-core p2" cx="8" cy="8" r="2.35" fill="#FFFFFF" fill-opacity="0.78"/>
+        </g>
+        <g transform="translate(48 0)">
+          <circle cx="8" cy="8" r="8" fill="#FFFFFF" fill-opacity="0.08"/>
+          <circle cx="8" cy="8" r="7.4" stroke="url(#glassStrokeLight)" stroke-width="1"/>
+          <circle class="project-light-core p3" cx="8" cy="8" r="2.35" fill="#FFFFFF" fill-opacity="0.78"/>
+        </g>
+        <g transform="translate(72 0)">
+          <circle cx="8" cy="8" r="8" fill="#FFFFFF" fill-opacity="0.08"/>
+          <circle cx="8" cy="8" r="7.4" stroke="url(#glassStrokeLight)" stroke-width="1"/>
+          <circle class="project-light-core p4" cx="8" cy="8" r="2.35" fill="#FFFFFF" fill-opacity="0.78"/>
+        </g>
+      </g>
     </g>
 
     <!-- hero icon: circular liquid-glass L M monogram -->
     <g transform="translate(82 161)" class="display">
-      <circle cx="40" cy="0" r="39.3" fill="url(#glassFillStrong)" filter="url(#shadow)"/>
-      <circle cx="40" cy="0" r="39" stroke="url(#glassStroke)" stroke-width="1.4"/>
-      <path d="M17 17C29 7 51 7 63 17" transform="translate(0 -40)" stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="1.2" stroke-linecap="round"/>
+      <g class="lm-shell">
+        <circle cx="40" cy="0" r="39.3" fill="url(#glassFillStrong)" filter="url(#shadow)"/>
+        <circle class="lm-ring" cx="40" cy="0" r="39" stroke="url(#glassStroke)" stroke-width="1.4"/>
+        <ellipse class="lm-highlight" cx="40" cy="-26" rx="21" ry="6.5" fill="#FFFFFF" fill-opacity="0.06" filter="url(#blurLarge)"/>
+        <path class="lm-highlight" d="M17 17C29 7 51 7 63 17" transform="translate(0 -40)" stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="1.2" stroke-linecap="round"/>
+      </g>
       <text x="40" y="8" text-anchor="middle" fill="#FFFFFF" fill-opacity="0.92" font-size="23" font-weight="600" letter-spacing="-1">L M</text>
     </g>
 
     <!-- hero title -->
     <g class="display">
-      <text x="82" y="272" fill="#FFFFFF" font-size="68" font-weight="500" letter-spacing="-3.8">AI application</text>
-      <text x="82" y="342" fill="#FFFFFF" font-size="68" font-weight="500" letter-spacing="-3.8">engineering for</text>
-      <text x="82" y="412" fill="#FFFFFF" font-size="68" font-weight="500" letter-spacing="-3.8">scientific </text>
-      <text x="389" y="422" fill="#ffffff" fill-opacity="0.78" font-size="70" font-weight="400" class="serif">instruments.</text>
+      <text class="intro-1" x="82" y="272" fill="#FFFFFF" font-size="68" font-weight="500" letter-spacing="-3.8">AI application</text>
+      <text class="intro-2" x="82" y="342" fill="#FFFFFF" font-size="68" font-weight="500" letter-spacing="-3.8">engineering for</text>
+      <text class="intro-3" x="82" y="412" fill="#FFFFFF" font-size="68" font-weight="500" letter-spacing="-3.8">scientific </text>
+      <text class="serif intro-3" x="389" y="422" fill="#ffffff" fill-opacity="0.78" font-size="70" font-weight="400">instruments.</text>
 
-      <text x="84" y="465" fill="#FFFFFF" fill-opacity="0.58" font-size="15" font-weight="400" letter-spacing="0.5">INSTRUMENT CONTROL SOFTWARE · RAG · AGENTS · AI DOCUMENT ANALYSIS</text>
+      <text class="intro-4" x="84" y="465" fill="#FFFFFF" fill-opacity="0.58" font-size="15" font-weight="400" letter-spacing="0.5">INSTRUMENT CONTROL SOFTWARE · RAG · AGENTS · AI DOCUMENT ANALYSIS</text>
     </g>
 
     <!-- skill pills + CTA -->
     <g transform="translate(82 511)" class="display">
       <g>
         <rect width="126" height="46" rx="23" fill="url(#glassFill)"/>
+        <g clip-path="url(#skillClip1)">
+          <rect class="skill-sheen" x="-40" y="-8" width="26" height="64" fill="#FFFFFF" fill-opacity="0.18"/>
+        </g>
         <rect x="0.7" y="0.7" width="124.6" height="44.6" rx="22.3" stroke="url(#glassStrokeLight)" stroke-width="1.4"/>
         <text x="63" y="29" text-anchor="middle" fill="#FFFFFF" fill-opacity="0.78" font-size="12">C++ / Qt</text>
       </g>
       <g transform="translate(138 0)">
         <rect width="126" height="46" rx="23" fill="url(#glassFill)"/>
+        <g clip-path="url(#skillClip2)">
+          <rect class="skill-sheen s2" x="-40" y="-8" width="26" height="64" fill="#FFFFFF" fill-opacity="0.18"/>
+        </g>
         <rect x="0.7" y="0.7" width="124.6" height="44.6" rx="22.3" stroke="url(#glassStrokeLight)" stroke-width="1.4"/>
         <text x="63" y="29" text-anchor="middle" fill="#FFFFFF" fill-opacity="0.78" font-size="12">Python / AI</text>
       </g>
       <g transform="translate(276 0)">
         <rect width="126" height="46" rx="23" fill="url(#glassFill)"/>
+        <g clip-path="url(#skillClip3)">
+          <rect class="skill-sheen s3" x="-40" y="-8" width="26" height="64" fill="#FFFFFF" fill-opacity="0.18"/>
+        </g>
         <rect x="0.7" y="0.7" width="124.6" height="44.6" rx="22.3" stroke="url(#glassStrokeLight)" stroke-width="1.4"/>
         <text x="63" y="29" text-anchor="middle" fill="#FFFFFF" fill-opacity="0.78" font-size="12">C/Linux</text>
       </g>
@@ -157,7 +235,7 @@
         <rect x="0.7" y="0.7" width="188.6" height="56.6" rx="28.3" stroke="url(#glassStroke)" stroke-width="1.4"/>
         <text x="24" y="36" fill="#FFFFFF" font-size="14" font-weight="500">Explore my work</text>
         <circle cx="161" cy="29" r="14" fill="#FFFFFF" fill-opacity="0.13"/>
-        <path d="M161 23V33M157 29L161 33L165 29" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path class="arrow-motion" d="M161 23V33M157 29L161 33L165 29" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
       </g>
     </g>
 
@@ -176,15 +254,17 @@
         <rect width="204" height="48" rx="24" fill="url(#glassFill)"/>
         <rect x="0.7" y="0.7" width="202.6" height="46.6" rx="23.3" stroke="url(#glassStrokeLight)" stroke-width="1.4"/>
         <circle cx="31" cy="24" r="15" fill="#FFFFFF" fill-opacity="0.08"/>
+        <circle class="g-ripple" cx="31" cy="24" r="15" stroke="#FFFFFF" stroke-opacity="0.18" stroke-width="1" fill="none"/>
+        <circle class="g-ripple r2" cx="31" cy="24" r="15" stroke="#FFFFFF" stroke-opacity="0.14" stroke-width="1" fill="none"/>
         <text x="26" y="29" fill="#FFFFFF" fill-opacity="0.8" font-size="14" font-weight="600">G</text>
-        <text x="58" y="30" fill="#FFFFFF" fill-opacity="0.72" font-size="13">github.com/Muilrz</text>
+        <text class="connected-text" x="58" y="30" fill="#FFFFFF" fill-opacity="0.72" font-size="13">github.com/Muilrz</text>
       </g>
 
       <g transform="translate(1372 40)">
         <rect width="180" height="48" rx="24" fill="url(#glassFill)"/>
         <rect x="0.7" y="0.7" width="178.6" height="46.6" rx="23.3" stroke="url(#glassStrokeLight)" stroke-width="1.4"/>
         <circle cx="28" cy="24" r="15" fill="#FFFFFF" fill-opacity="0.09"/>
-        <path d="M28 17L30 22L35 24L30 26L28 31L26 26L21 24L26 22L28 17Z" fill="#FFFFFF" fill-opacity="0.85"/>
+        <path class="spark" d="M28 17L30 22L35 24L30 26L28 31L26 26L21 24L26 22L28 17Z" fill="#FFFFFF" fill-opacity="0.85"/>
         <text x="54" y="30" fill="#FFFFFF" fill-opacity="0.76" font-size="13" font-weight="500">AI × Instrument</text>
       </g>
     </g>
@@ -202,15 +282,18 @@
 
     <!-- subtle metadata -->
     <g class="display">
-      <text x="1195" y="142" fill="#FFFFFF" fill-opacity="0.22" font-size="10" letter-spacing="2">> LAB NODE / XMU </text>
-      <text x="1195" y="164" fill="#FFFFFF" fill-opacity="0.22" font-size="10" letter-spacing="2">> BUILD / Prof. Ren's group</text>
-      <text x="1195" y="186" fill="#FFFFFF" fill-opacity="0.22" font-size="10" letter-spacing="2">> SESSION / Liu Ming</text>
+      <text x="1195" y="142" fill="#FFFFFF" fill-opacity="0.22" font-size="10" letter-spacing="2">> LAB NODE / XMU <tspan class="cursor">_</tspan></text>
+      <text x="1195" y="164" fill="#FFFFFF" fill-opacity="0.22" font-size="10" letter-spacing="2">> BUILD / Prof. Ren's group <tspan class="cursor">_</tspan></text>
+      <text x="1195" y="186" fill="#FFFFFF" fill-opacity="0.22" font-size="10" letter-spacing="2">> SESSION / Liu Ming <tspan class="cursor">_</tspan></text>
     </g>
 
     <!-- PROJECTS OUTER PANEL -->
     <g transform="translate(870 300)" class="display">
       <rect width="682" height="372" rx="40" fill="url(#glassFillStrong)" filter="url(#softShadow)"/>
       <rect x="0.7" y="0.7" width="680.6" height="370.6" rx="39.3" stroke="url(#glassStroke)" stroke-width="1.4"/>
+      <g clip-path="url(#frameClip)" opacity="0.6">
+        <rect class="sheen" x="-240" y="2" width="180" height="2" rx="1" fill="#FFFFFF" opacity="0"/>
+      </g>
 
       <text x="30" y="48" fill="#FFFFFF" fill-opacity="0.46" font-size="11" font-weight="500" letter-spacing="3">ONGOING PROJECTS</text>
       <text x="30" y="83" fill="#FFFFFF" font-size="27" font-weight="500" letter-spacing="-1.2">Selected work in progress</text>
@@ -230,7 +313,7 @@
       <g transform="translate(353 108)">
         <rect width="301" height="112" rx="27" fill="url(#glassFill)"/>
         <rect x="0.7" y="0.7" width="299.6" height="110.6" rx="26.3" stroke="url(#glassStrokeLight)" stroke-width="1.4"/>
-        <circle cx="33" cy="32" r="15" fill="#FFFFFF" fill-opacity="0.09"/>
+  <circle cx="33" cy="32" r="15" fill="#FFFFFF" fill-opacity="0.09"/>
         <path d="M27 27H39V38H27V27Z" stroke="#FFFFFF" stroke-opacity="0.78" stroke-width="1.3"/>
         <path d="M30 31H36M30 34H35" stroke="#FFFFFF" stroke-opacity="0.58" stroke-width="1.1" stroke-linecap="round"/>
         <text x="58" y="37" fill="#FFFFFF" font-size="17" font-weight="500">SDK_Anlysis_Agent</text>
